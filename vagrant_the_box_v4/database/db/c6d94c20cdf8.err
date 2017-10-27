@@ -1,0 +1,57 @@
+2017-08-11T10:31:00.428062Z mysqld_safe Logging to '/var/lib/mysql/c6d94c20cdf8.err'.
+2017-08-11T10:31:00.463954Z mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+2017-08-11T10:31:00.687223Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2017-08-11T10:31:00.692424Z 0 [Note] /usr/sbin/mysqld (mysqld 5.7.19) starting as process 340 ...
+2017-08-11T10:31:00.698095Z 0 [Warning] Setting lower_case_table_names=2 because file system for /var/lib/mysql/ is case insensitive
+2017-08-11T10:31:00.707041Z 0 [Note] InnoDB: PUNCH HOLE support available
+2017-08-11T10:31:00.707228Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2017-08-11T10:31:00.707381Z 0 [Note] InnoDB: Uses event mutexes
+2017-08-11T10:31:00.707500Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2017-08-11T10:31:00.707628Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.3
+2017-08-11T10:31:00.707735Z 0 [Note] InnoDB: Using Linux native AIO
+2017-08-11T10:31:00.708112Z 0 [Note] InnoDB: Number of pools: 1
+2017-08-11T10:31:00.708419Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2017-08-11T10:31:00.710641Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2017-08-11T10:31:00.721308Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2017-08-11T10:31:00.724471Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+2017-08-11T10:31:00.758305Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2017-08-11T10:31:00.831893Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2017-08-11T10:31:00.832927Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2017-08-11T10:31:00.902921Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2017-08-11T10:31:00.905667Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2017-08-11T10:31:00.905881Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2017-08-11T10:31:00.906233Z 0 [Note] InnoDB: Waiting for purge to start
+2017-08-11T10:31:00.957050Z 0 [Note] InnoDB: 5.7.19 started; log sequence number 2539536
+2017-08-11T10:31:00.957462Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2017-08-11T10:31:00.958751Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+2017-08-11T10:31:00.974102Z 0 [Warning] World-writable config file './auto.cnf' is ignored.
+2017-08-11T10:31:00.975133Z 0 [Warning] World-writable config file './auto.cnf' has been removed.
+
+2017-08-11T10:31:00.975574Z 0 [Note] Salting uuid generator variables, current_pid: 340, server_start_time: 1502447460, bytes_sent: 0, 
+2017-08-11T10:31:00.975907Z 0 [Note] Generated uuid: '2b8e7330-7e80-11e7-9451-0242ac110002', server_start_time: 95701493584070840, bytes_sent: 68485728
+2017-08-11T10:31:00.976130Z 0 [Warning] No existing UUID has been found, so we assume that this is the first time that this server has been started. Generating a new UUID: 2b8e7330-7e80-11e7-9451-0242ac110002.
+2017-08-11T10:31:00.998616Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2017-08-11T10:31:01.005225Z 0 [Warning] CA certificate ca.pem is self signed.
+2017-08-11T10:31:01.008085Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+2017-08-11T10:31:01.008314Z 0 [Note] IPv6 is available.
+2017-08-11T10:31:01.008482Z 0 [Note]   - '::' resolves to '::';
+2017-08-11T10:31:01.009042Z 0 [Note] Server socket created on IP: '::'.
+2017-08-11T10:31:01.026975Z 0 [Note] InnoDB: Buffer pool(s) load completed at 170811 10:31:01
+2017-08-11T10:31:01.049772Z 0 [Warning] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.049891Z 0 [Warning] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.049957Z 0 [Warning] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.050160Z 0 [Warning] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.050214Z 0 [Warning] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.050315Z 0 [Warning] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.077040Z 0 [Warning] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.077223Z 0 [Warning] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+2017-08-11T10:31:01.253909Z 0 [Note] Event Scheduler: Loaded 0 events
+2017-08-11T10:31:01.254180Z 0 [Note] /usr/sbin/mysqld: ready for connections.
+Version: '5.7.19'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+2017-08-11T10:31:01.254254Z 0 [Note] Executing 'SELECT * FROM INFORMATION_SCHEMA.TABLES;' to get a list of tables using the deprecated partition engine. You may use the startup option '--disable-partition-engine-check' to skip this check. 
+2017-08-11T10:31:01.254312Z 0 [Note] Beginning of list of non-natively partitioned tables
+2017-08-11T10:31:01.594539Z 0 [Note] End of list of non-natively partitioned tables
+2017-08-11T10:31:32.590669Z 3 [Note] Access denied for user 'users_service'@'localhost' (using password: YES)
+2017-08-11T10:36:48.598410Z 7 [Note] Access denied for user 'users_service'@'localhost' (using password: YES)
+2017-08-11T10:37:20.098176Z 9 [Note] Access denied for user 'users_service'@'localhost' (using password: YES)
+2017-08-11T10:41:06.342986Z 11 [Note] Access denied for user 'users_service'@'localhost' (using password: YES)

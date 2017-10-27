@@ -1,0 +1,12 @@
+Vagrant.configure(2) do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.hostname = "docker-host"
+
+  config.proxy.http     = "http://10.110.8.42:8080"
+  config.proxy.https    = "http://10.110.8.42:8080"
+  config.proxy.no_proxy = "localhost,127.0.0.1"
+
+  config.vm.provision "docker"
+  config.vm.network :forwarded_port, guest: 80, host: 8081, host_ip: "127.0.0.1"
+
+end

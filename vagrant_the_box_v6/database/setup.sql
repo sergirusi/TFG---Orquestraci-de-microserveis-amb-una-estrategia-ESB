@@ -1,0 +1,1 @@
+create table users_data (client_name VARCHAR(50) NOT NULL PRIMARY KEY, age VARCHAR(3) NOT NULL, phone_number VARCHAR(12) NOT NULL, email VARCHAR(50) NOT NULL);

@@ -1,0 +1,9 @@
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.hostname = "docker-host"
+  config.vm.provision :shell, :path => "bootstrap.sh"
+  config.vm.provision "docker"
+  config.vm.network :forwarded_port, guest: 80, host: 8888
+
+end

@@ -1,0 +1,31 @@
+{
+  "name": "users-service",
+  "version": "1.0.0",
+  "description": "sign up a client",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergirusi/TFG---Orquestraci-de-microserveis-amb-una-estrategia-ESB.git"
+  },
+  "keywords": [
+    "signup"
+  ],
+  "author": "Sergi Rusiñol",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergirusi/TFG---Orquestraci-de-microserveis-amb-una-estrategia-ESB/issues"
+  },
+  "homepage": "https://github.com/sergirusi/TFG---Orquestraci-de-microserveis-amb-una-estrategia-ESB#readme",
+  "dependencies": {
+    "body-parser": "~1.17.2",
+    "express": "^4.15.3",
+    "http": "0.0.0",
+    "http-proxy": "^1.16.2",
+    "morgan": "^1.8.2",
+    "mysql": "^2.13.0",
+    "request": "^2.81.0"
+  }
+}

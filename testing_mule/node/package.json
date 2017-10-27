@@ -1,0 +1,21 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.0"
+  }
+}

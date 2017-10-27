@@ -1,0 +1,3 @@
+# bin/bash!
+echo Starting Mule ESB...
+docker run -d --name mule_esb -p 8083:8083 -v /vagrant/mule/apps:/opt/mule/apps -v /vagrant/mule/logs:/opt/mule/logs andreptb/mule:3.6.1

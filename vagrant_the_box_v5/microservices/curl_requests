@@ -1,0 +1,7 @@
+curl -H "Content-Type: application/json" -X POST -d '{"client_name": "Sergi", "age": "24", "phone_number": "+34612345678", "email": "sergi@gmail.com"}' http://127.0.0.1:8087/sign_up_client
+
+curl -X GET http://127.0.0.1:8084/get_client?data=Sergi
+
+curl -X POST http://127.0.0.1:8085/delete_client?data=Sergi
+
+curl -H "Content-Type: application/json" -X POST -d '{"client_name": "Sergi", "type": "client_name","data": "Rusi"}' http://127.0.0.1:8086/update_client

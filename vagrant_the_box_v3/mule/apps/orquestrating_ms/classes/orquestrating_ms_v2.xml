@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="8083" doc:name="HTTP Listener Configuration"/>
+    <http:request-config name="HTTP_Request_Configuration" host="172.17.0.3" port="8082" doc:name="HTTP Request Configuration"/>
+    <flow name="orquestrating_ms_v2Flow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/sign_up_client"  doc:name="HTTP" allowedMethods="POST"/>
+        <object-to-string-transformer doc:name="Object to String"/>
+        <logger message="Data was recieved: #[payload]" level="INFO" doc:name="Logger"/>
+        <json:object-to-json-transformer doc:name="Object to JSON"/>
+        <logger message="Data was recieved: #[payload]" level="INFO" doc:name="Logger"/>
+        <custom-transformer mimeType="text/javascript" class="orquestrating_ms_v2.transform" doc:name="Java"/>
+        <logger message="MAKING CONNECTION" level="INFO" doc:name="Logger"/>
+        <object-to-string-transformer doc:name="Object to String"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/sign_up_client" method="POST" doc:name="HTTP">
+            <http:request-builder>
+                <http:query-param paramName="data" value="#[payload]"/>
+            </http:request-builder>
+        </http:request>
+        <logger message="DATA: #[message.payload]" level="INFO" doc:name="Logger"/>
+    </flow>
+</mule>
