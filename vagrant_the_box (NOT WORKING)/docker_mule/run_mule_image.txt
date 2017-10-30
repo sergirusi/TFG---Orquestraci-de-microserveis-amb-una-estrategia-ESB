@@ -1,3 +1,0 @@
-docker run -d --name mymule -p 80:[mule-http-port] -v /vagrant/docker_mule/apps:/opt/mule/apps -v /vagrant/docker_mule/logs:/opt/mule/logs andreptb/mule:3.6.1
-
-docker run -d --name mymule -p 80:8081 -v /vagrant/docker_mule/apps:/opt/mule/apps -v /vagrant/docker_mule/logs:/opt/mule/logs andreptb/mule:3.6.1

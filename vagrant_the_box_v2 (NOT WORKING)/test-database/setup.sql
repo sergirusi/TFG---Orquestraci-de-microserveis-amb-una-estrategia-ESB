@@ -1,1 +1,0 @@
-create table directory (client_name TEXT NOT NULL PRIMARY KEY, age TEXT NOT NULL, phone_number TEXT NOT NULL, email TEXT NOT NULL);

@@ -1,3 +1,0 @@
-vagrant_the_box V.2
-
-The connection between database and node service is working.
