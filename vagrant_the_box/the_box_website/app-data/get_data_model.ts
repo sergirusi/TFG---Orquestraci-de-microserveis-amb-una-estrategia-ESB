@@ -1,6 +1,8 @@
 export class table_data {
-	name = ''
-	age = ''
-	phone = ''
-	email = ''
+	data = new FormGroup ({
+		name = new FormControl();
+		age = new FormControl();
+		phone = new FormControl();
+		email = new FormControl();
+	})
 }

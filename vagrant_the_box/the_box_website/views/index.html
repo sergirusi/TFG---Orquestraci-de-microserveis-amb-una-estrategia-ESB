@@ -28,11 +28,11 @@
 				</b>
 				<h3><i><b>Sign up</b></i></h3>
 			</div>
-			<form action="http://127.0.0.1:8081/sign_up_client" method="GET" onsubmit="alert_create()" name="sign_up" class="form-horizontal" role="form" style="width: 50%;">
+			<form name="sign_up" class="form-horizontal" role="form" style="width: 50%;">
         		<div class="form-group">
             		<label for="client_name" class="col-sm-2 control-label">Name</label>
             		<div class="col-sm-10">
-                		<input type="text" class="form-control" id="client_name" name="client_name" placeholder="First & Last Name" value="">
+                		<input type="text" class="form-control" id="client_name_sign" name="client_name" placeholder="First & Last Name" value="">
                 	</div>
                 	<label for="age" class="col-sm-2 control-label">Age</label>
                 	<div class="col-sm-10">
@@ -47,26 +47,37 @@
                 		<input type="text" class="form-control" id="email" name="email" placeholder="Set your e-mail address" value="">
                 	</div>
                 	<div class="col-sm-10 col-sm-offset-2">
-                		<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                		<input id="submit" name="submit" type="button" onclick="create_client()" value="Send" class="btn btn-primary">
             		</div>
                 </div>
             </form>
-            <script type="text/javascript">
-                function alert_create() {
-                    alert("Client " + document.client_name.value + " has been created");
+            <script>
+                function create_client() {
+                    var name = document.getElementById('client_name_sign').value;
+                    var age = document.getElementById('age').value;
+                    var phone = document.getElementById('phone_number').value;
+                    var email = document.getElementById('email').value;
+                    $.ajax({
+                        url: "http://127.0.0.1:8081/sign_up_client?client_name=" + name + "&age=" + age + "&phone_number=" + phone + "&email=" + email,
+                        method: "GET"
+                    }).done(function() {
+                        alert("Client " + name + " has been signed up")
+                    }).fail(function(){
+                        alert("Error 404: Client not getting response from sign_up_client service.");
+                    })
                 }
             </script>
             <div class="col-sm-10">
 				<h3><i><b>Get client</b></i></h3>
 			</div>   
-            <form action="http://127.0.0.1:8081/get_client" method="GET" onsubmit="myFunction()" name="get_client" class="form-horizontal" role="form" style="width: 50%;">
+            <form name="get" class="form-horizontal" role="form" style="width: 50%;">
         		<div class="form-group">
             		<label for="client_name" class="col-sm-2 control-label">Name</label>
             		<div class="col-sm-10">
-                		<input type="text" class="form-control" id="client_name" name="client_name" placeholder="First & Last Name" value="">
+                		<input type="text" class="form-control" id="client_name_get" name="client_name" placeholder="First & Last Name" value="">
                 	</div>
                 	<div class="col-sm-10 col-sm-offset-2">
-                		<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                		<input id="submit" name="submit" type="button" onclick="get_client()" value="Send" class="btn btn-primary">
             		</div>
                     <div class="table-responsive-vertical shadow-z-1" style="margin-left:55px">
                         <table id="table" class="table table-hover table-mc-light-blue", cellpadding="10">
@@ -91,46 +102,87 @@
                 </div>
             </form>
             <script>
-                function myFunction() {
-                    $.get('http://127.0.0.1:8081/get_client', {}, function(data) {
-                        alert("HERE IS MY DATA = " + data)
+                function get_client() {
+                    var name = document.getElementById('client_name_get').value;
+                    $.ajax({
+                        url: "http://127.0.0.1:8081/get_client?client_name=" + name,
+                        method: "GET"
+                    }).done(function() {
+                       setTimeout(get_data(), 10000);
+
+                    }).fail(function(){
+                        alert("Error 404: Client not getting response from get_client service.");
                     })
-                    /*$.getJSON("views/get_data.json", function(json) {
-                        alert("THAT'S THE JSON FOUND = " + json + " AND THIS IS THE CLIENT NAME = " + json.client_name);
-                        document.getElementById('getname').innerHTML = json.client_name;
-                        document.getElementById('getage').innerHTML = json.age;
-                        document.getElementById('getphone').innerHTML = json.phone_number;
-                        document.getElementById('getemail').innerHTML = json.email;
-                    }*/
+
+                    function get_data() {
+                        var name = document.getElementById('client_name_get').value;
+                        var json;
+                        $.ajax({
+                            url: "http://127.0.0.1:8081/get_data",
+                            method: "GET",
+                        }).done(function(data) {
+                            if(data.client_name === undefined) data = JSON.parse(data)
+                            if(data.client_name != "null") {
+                                name = name.toLowerCase();
+                                var lowercaseData = data.client_name.toLowerCase();
+                                if(lowercaseData == name) {
+                                    document.getElementById('getname').innerHTML = data.client_name;
+                                    document.getElementById('getage').innerHTML = data.age;
+                                    document.getElementById('getphone').innerHTML = data.phone_number;
+                                    document.getElementById('getemail').innerHTML = data.email;
+                                }
+                                else {
+                                    setTimeout(get_data(), 10000);
+                                }
+                            }
+                            else {
+                                document.getElementById('getname').innerHTML = "";
+                                document.getElementById('getage').innerHTML = "";
+                                document.getElementById('getphone').innerHTML = "";
+                                document.getElementById('getemail').innerHTML = "";
+                                alert("Client not found!")
+                            }
+                        }).fail(function(){
+                            alert("Error 404: Client not getting response from get_data service.");
+                        })
+                    }
                 }                     
             </script> 
             <div class="col-sm-10">
 				<h3><i><b>Delete client</b></i></h3>
 			</div>   
-            <form action="http://127.0.0.1:8081/delete_client" method="GET" onsubmit="alert_delete()" name="delete_client" class="form-horizontal" role="form" style="width: 50%;">
+            <form name="delete" class="form-horizontal" role="form" style="width: 50%;">
         		<div class="form-group">
             		<label for="client_name" class="col-sm-2 control-label">Name</label>
             		<div class="col-sm-10">
-                		<input type="text" class="form-control" id="client_name" name="client_name" placeholder="First & Last Name" value="">
+                		<input type="text" class="form-control" id="client_name_delete" name="client_name" placeholder="First & Last Name" value="">
                 	</div>
                 	<div class="col-sm-10 col-sm-offset-2">
-                		<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                		<input id="submit" name="submit" type="button" onclick="delete_client()" value="Send" class="btn btn-primary">
             		</div>
                 </div>
             </form>
-            <script type="text/javascript">
-                function alert_delete() {
-                    alert("Client " + document.client_name.value + " has been deleted");
+             <script>
+                function delete_client() {
+                    var name = document.getElementById('client_name_delete').value;
+                    $.ajax({
+                        url: "http://127.0.0.1:8081/delete_client?client_name=" + name,
+                        method: "GET"
+                    }).done(function() {
+                        alert("Client " + name + " has been deleted")
+                    }).fail(function(){
+                        alert("Error 404: Client not getting response from sign_up_client service.");
+                    })
                 }
             </script>
             <div class="col-sm-10">
 				<h3><i><b>Update client</b></i></h3>
 			</div>
-			<form action="http://127.0.0.1:8081/update_client" method="GET" onsubmit="alert_update()" name="update_client" class="form-horizontal" role="form" style="width: 50%;">
+			<form name="update" class="form-horizontal" role="form" style="width: 50%;">
         		<div class="form-group">
             		<label for="client_name" class="col-sm-2 control-label">Name</label>
             		<div class="col-sm-10">
-                		<input type="text" class="form-control" id="client_name" name="client_name" placeholder="First & Last Name" value="">
+                		<input type="text" class="form-control" id="client_name_update" name="client_name" placeholder="First & Last Name" value="">
                 	</div>
                 	<label for="type" class="col-sm-2 control-label">Parameter</label>
                 	<div class="col-sm-10">
@@ -141,13 +193,23 @@
                 		<input type="text" class="form-control" id="data" name="data" placeholder="Set the value of the parameter" value="">
                 	</div>
                 	<div class="col-sm-10 col-sm-offset-2">
-                		<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                		<input id="submit" name="submit" type="button" onclick="update_client()" value="Send" class="btn btn-primary">
             		</div>
                 </div>
             </form>
-            <script type="text/javascript">
-                function alert_update() {
-                    alert("Client " + document.client_name.value + " has been updated");
+            <script>
+                function update_client() {
+                    var name = document.getElementById('client_name_update').value;
+                    var type = document.getElementById('type').value;
+                    var data = document.getElementById('data').value;
+                    $.ajax({
+                        url: "http://127.0.0.1:8081/update_client?client_name=" + name + "&type=" + type + "&data=" + data,
+                        method: "GET"
+                    }).done(function() {
+                        alert("Client " + name + " has been updated")
+                    }).fail(function(){
+                        alert("Error 404: Client not getting response from sign_up_client service.");
+                    })
                 }
             </script> 
             </div>

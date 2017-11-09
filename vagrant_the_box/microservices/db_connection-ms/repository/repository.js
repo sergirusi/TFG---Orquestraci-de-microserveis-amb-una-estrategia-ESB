@@ -31,36 +31,55 @@ class Repository {
   getClient(req) {
 
     return new Promise((resolve, reject) => {
+      try {
+        this.connection.query(req, (err, results) => {
+          if(err) {
+            return reject(new Error('An error occured getting the client: ' + err));
+          } else {
+            resolve(results[0]);
+          }
+          var json = results[0];
+          if (json === undefined) {
+            console.log("ERROR: RESULT IS UNDEFINED")
+            json = {
+              client_name: null,
+              age: null,
+              phone_number: null,
+              email: null
+            }
+          }
+          var requestOptions = {
+            hostname: 'web',
+            port: 8081,
+            path: "/db_response?client_name=" + json.client_name + "&age=" + json.age + "&phone_number=" + json.phone_number + "&email=" +  json.email,
+            method: "POST"
+          }
 
-      //  Fetch the customer.
-      this.connection.query(req, (err, results) => {
-
-        if(err) {
-          return reject(new Error('An error occured getting the client: ' + err));
-        } else {
-          resolve(results[0]);
-        }
+          var externalRequest = http.request(requestOptions, (externalResponse) => {
+            externalResponse.on('end', () => {
+            })
+          })
+          var data = JSON.stringify(json);
+          console.log("REQUESTED DATA : " + data + "\n");
+          externalRequest.end(data);
+          console.log("SENDED DATA TO CLIENT\n");
+        });
+      } catch(err) {
+        console.log("ERROR: " + err);
         var requestOptions = {
-          hostname: 'mule',
-          port: 8083,
-          path: "/db_response",
+          hostname: 'web',
+          port: 8081,
+          path: "/db_response?client_name=" + undefined + "&age=" + undefined + "&phone_number=" + undefined + "&email=" +  undefined,
           method: "POST"
         }
 
         var externalRequest = http.request(requestOptions, (externalResponse) => {
-          externalResponse.on('data', function(data) {
-            console.log(data);
-          })
           externalResponse.on('end', () => {
           })
         })
-        var data = JSON.stringify(results[0]);
-        console.log("REQUESTED DATA : " + data + "\n");
-        externalRequest.end(JSON.stringify(data));
-        console.log("SENDED DATA TO MULE\n");
-      });
-
-    });
+        externalRequest.end(undefined);
+      }
+    })
   }
 
   deleteClient(req) {

@@ -2,6 +2,7 @@ var express = require("express");
 var http = require("http");
 var fs = require('fs');
 var app = express();
+var cors = require('cors');
 var router = express.Router();
 var path = __dirname + '/views/';
 
@@ -22,7 +23,9 @@ router.get("/contact",function(req,res){
   res.sendFile(path + "contact.html");
 });
 
-var gotJSON;
+var gotJSON = {
+	client_name: ""
+};
 
 router.get('/sign_up_client', function(req, res) {
 
@@ -42,10 +45,15 @@ router.get('/sign_up_client', function(req, res) {
 	})
 	externalRequest.end();
 	console.log("SENT DATA = " + req.query);
+	res.send("OK");
 })
 
 router.get('/get_client', function(req, res) {
-
+	
+	gotJSON = {
+		client_name: ""
+	};
+	
 	var urlPath = "/get_client?client_name=" + req.query.client_name;
 
 	var requestOptions = {
@@ -57,7 +65,8 @@ router.get('/get_client', function(req, res) {
 
 	var externalRequest = http.request(requestOptions, (externalResponse) => {
 		externalResponse.on('data', function(data) {
-	  		console.log(data);
+	  		console.log("externalResponse = " + data);
+	  		res.send('OK')
 		})
 	})
 	externalRequest.end();
@@ -81,6 +90,7 @@ router.get('/delete_client', function(req, res) {
 	})
 	externalRequest.end();
 	console.log("SENT DATA = " + req.query);
+	res.send("OK");
 })
 
 router.get('/update_client', function(req, res) {
@@ -100,24 +110,24 @@ router.get('/update_client', function(req, res) {
 		})
 	})
 	externalRequest.end();
+	res.send("OK");
 })
 
 router.post('/db_response', function(req, res) {
  	gotJSON = JSON.stringify(req.query);
-  	fs.writeFile("views/get_data.json", gotJSON);
-  	res.send('HELLO WORLD')
+  	res.send('OK')
   	console.log("JSON DATA = " + gotJSON);
 });
 
-router.get('/get_client', function(req, res) {
- 	var gotJSON = JSON.stringify(req.query);
-  	fs.writeFile("views/get_data.json", gotJSON);
-  	res.send('HELLO WORLD')
-  	console.log("JSON DATA = " + gotJSON);
+router.get('/get_data', function(req, res) {
+	console.log("get_data->gotJSON = " + gotJSON);
+	res.send(gotJSON);
 });
 
 
 app.use("/",router);
+
+app.use(cors());
 
 /*app.use("*",function(req,res){
   res.sendFile(path + "404.html");

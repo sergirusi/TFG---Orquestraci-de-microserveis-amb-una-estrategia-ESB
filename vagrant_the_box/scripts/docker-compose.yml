@@ -36,7 +36,7 @@ services:
       - 8082:8082
     links:
       - db:db
-      - mule:mule
+      - web:web
     environment:
       DATABASE_HOST: 'db'
     restart: always

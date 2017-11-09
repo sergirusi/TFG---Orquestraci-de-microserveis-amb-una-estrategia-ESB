@@ -15,6 +15,7 @@ module.exports = (app, options) => {
   app.get('/get_client', (req, res, next) => {
     console.log('GET CLIENT')
     options.repository.getClient(req.query.data).catch(next);
+    res.send('OK')
   });
 
   app.post('/delete_client', (req, res, next) => {

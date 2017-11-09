@@ -23,7 +23,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/get_client', function(req, res) {
 
   var data = req.query.client_name;
-
   var requestOptions = {
     hostname: 'mule',
     port: 8083,
@@ -41,31 +40,7 @@ app.get('/get_client', function(req, res) {
   })
   console.log("REQUESTED DATA : " + data)
   externalRequest.end(data);
-})
-
-app.post('/db_response', function(req, res) {
-  console.log(req.query.data)
-
-  var json = JSON.parse(req.query.data)
-
-  var requestOptions = {
-    hostname: 'web',
-    port: 8081,
-    path: "/db_response?client_name=" + json.client_name + "&age=" + json.age + "&phone_number=" + json.phone_number + "&email=" +  json.email,
-    method: "POST"
-  }
-
-
-
-  var externalRequest = http.request(requestOptions, (externalResponse) => {
-    externalResponse.on('data', function(data) {
-      console.log(data);
-    })
-    externalResponse.on('end', () => {
-      res.end('Data was sent to destination');
-    })
-  })
-  externalRequest.end();
+  res.send("OK");
 })
 
 app.listen(port, (err) => {
