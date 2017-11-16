@@ -1,5 +1,49 @@
 version: '2'
 services:
+
+  elasticsearch:
+    container_name: elasticsearch
+    build: ../elk/elasticsearch/
+    volumes:
+      - ../elk/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      the_box:
+        ipv4_address: 172.16.0.11
+
+  logstash:
+    container_name: logstash
+    build: ../elk/logstash/
+    volumes:
+      - ../elk/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ../elk/logstash/pipeline:/usr/share/logstash/pipeline
+    ports:
+      - "5000:5000"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      the_box:
+        ipv4_address: 172.16.0.10
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    container_name: kibana
+    build: ../elk/kibana/
+    volumes:
+      - ../elk/kibana/config/:/usr/share/kibana/config
+    ports:
+      - "5601:5601"
+    networks:
+      the_box:
+        ipv4_address: 172.16.0.12
+    depends_on:
+      - elasticsearch
+
   db:
     container_name: db
     ports:
@@ -16,6 +60,11 @@ services:
     networks:
       the_box:
         ipv4_address: 172.16.0.3
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+  
   web:
     container_name: web
     ports:
@@ -30,6 +79,11 @@ services:
     networks:
       the_box:
         ipv4_address: 172.16.0.2
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+  
   db_connection:
     container_name: db_connection
     ports:
@@ -44,6 +98,11 @@ services:
     networks:
       the_box:
         ipv4_address: 172.16.0.4
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+  
   sign_up_ms:
     container_name: sign_up_ms
     ports:
@@ -55,18 +114,27 @@ services:
     networks:
       the_box:
         ipv4_address: 172.16.0.9
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+  
   get_client_ms:
     container_name: get_client_ms
     ports:
       - 8084:8084
     links:
       - mule:mule
-#      - web:web
     restart: always
     image: get_client_ms
     networks:
       the_box:
         ipv4_address: 172.16.0.6
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+  
   delete_client_ms:
     container_name: delete_client_ms
     ports:
@@ -78,6 +146,11 @@ services:
     networks:
       the_box:
         ipv4_address: 172.16.0.7
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+  
   update_client_ms:
     container_name: update_client_ms
     ports:
@@ -89,6 +162,11 @@ services:
     networks:
       the_box:
         ipv4_address: 172.16.0.8
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+  
   mule:
     container_name: mule
     ports:
@@ -101,6 +179,11 @@ services:
     networks:
       the_box:
         ipv4_address: 172.16.0.5
+    logging:
+      driver: "syslog"
+      options:
+        syslog-address: "tcp://127.0.0.1:5000"
+
 volumes:
   my-datavolume:
 networks:

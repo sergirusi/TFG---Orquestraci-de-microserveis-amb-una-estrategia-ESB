@@ -17,7 +17,25 @@ class Repository {
   addClient(req) {
     return new Promise((resolve, reject) => {
       this.connection.query(req, (err, results) => {
-        if(err) {
+        if(err && err.toString().indexOf('ER_NO_SUCH_TABLE') > -1) {
+          var query = "create table users_data(client_name VARCHAR(50), age VARCHAR(3), phone_number VARCHAR(12), email VARCHAR(50), PRIMARY KEY(client_name));"
+          this.connection.query(query, (err, results) => {
+            if(err) {
+              return reject(new Error('An error occured signing up user: ' + err));
+            }
+            else {
+              this.connection.query(req, (err, results) => {
+                if(err) {
+                  return reject(new Error('An error occured signing up user: ' + err));
+                }
+                else {
+                  console.log("SUCCESS addClient")
+                }
+              })
+            }
+          })
+        }
+        else if(err) {
           return reject(new Error('An error occured signing up user: ' + err));
         }
         else {

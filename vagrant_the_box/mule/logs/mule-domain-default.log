@@ -1,8 +1,8 @@
-INFO  2017-11-09 08:41:01,237 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2017-11-16 08:19:18,549 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2017-11-09 08:41:01,238 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2017-11-16 08:19:18,565 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -44,7 +44,7 @@ router.get('/sign_up_client', function(req, res) {
 		})
 	})
 	externalRequest.end();
-	console.log("SENT DATA = " + req.query);
+	console.log("Website Server: 	SIGN UP CLIENT DATA SENT = " + req.query);
 	res.send("OK");
 })
 
