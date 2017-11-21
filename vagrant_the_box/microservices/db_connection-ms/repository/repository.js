@@ -21,25 +21,25 @@ class Repository {
           var query = "create table users_data(client_name VARCHAR(50), age VARCHAR(3), phone_number VARCHAR(12), email VARCHAR(50), PRIMARY KEY(client_name));"
           this.connection.query(query, (err, results) => {
             if(err) {
-              return reject(new Error('An error occured signing up user: ' + err));
+              return reject(new Error('DB CONNECTION MICROSERVICE: An error occured signing up user: ' + err));
             }
             else {
               this.connection.query(req, (err, results) => {
                 if(err) {
-                  return reject(new Error('An error occured signing up user: ' + err));
+                  return reject(new Error('DB CONNECTION MICROSERVICE: An error occured signing up user: ' + err));
                 }
                 else {
-                  console.log("SUCCESS addClient")
+                  console.log("DB CONNECTION MICROSERVICE: SUCCESS! Client signed up")
                 }
               })
             }
           })
         }
         else if(err) {
-          return reject(new Error('An error occured signing up user: ' + err));
+          return reject(new Error('DB CONNECTION MICROSERVICE: An error occured signing up user: ' + err));
         }
         else {
-          console.log("SUCCESS addClient")
+          console.log("DB CONNECTION MICROSERVICE: SUCCESS! Client signed up")
         }
       });
 
@@ -52,13 +52,13 @@ class Repository {
       try {
         this.connection.query(req, (err, results) => {
           if(err) {
-            return reject(new Error('An error occured getting the client: ' + err));
+            return reject(new Error('DB CONNECTION MICROSERVICE: An error occured getting the client: ' + err));
           } else {
             resolve(results[0]);
           }
           var json = results[0];
           if (json === undefined) {
-            console.log("ERROR: RESULT IS UNDEFINED")
+            console.log("DB CONNECTION MICROSERVICE: Database response is undefined")
             json = {
               client_name: null,
               age: null,
@@ -78,12 +78,12 @@ class Repository {
             })
           })
           var data = JSON.stringify(json);
-          console.log("REQUESTED DATA : " + data + "\n");
+          console.log("DB CONNECTION MICROSERVICE: Database response to requested client: " + data + "\n");
           externalRequest.end(data);
-          console.log("SENDED DATA TO CLIENT\n");
+          console.log("DB CONNECTION MICROSERVICE: Sent data to client\n");
         });
       } catch(err) {
-        console.log("ERROR: " + err);
+        console.error("DB CONNECTION MICROSERVICE: An error occured getting the client = ", err);
         var requestOptions = {
           hostname: 'web',
           port: 8081,
@@ -104,10 +104,10 @@ class Repository {
     return new Promise((resolve, reject) => {
       this.connection.query(req, (err, results) => {
         if(err) {
-          return reject(new Error('An error occured getting the users: ' + err));
+          return reject(new Error('DB CONNECTION MICROSERVICE: An error occured deleting the client: ' + err));
         }
         else {
-          console.log("SUCCESS deleteClient")
+          console.log("DB CONNECTION MICROSERVICE: SUCCESS! Client deleted")
         }
       });
 
@@ -118,10 +118,10 @@ class Repository {
     return new Promise((resolve, reject) => {
       this.connection.query(req, (err, results) => {
         if(err) {
-          return reject(new Error('An error occured getting the users: ' + err));
+          return reject(new Error('DB CONNECTION MICROSERVICE: An error occured updating the client: ' + err));
         }
         else {
-          console.log("SUCCESS updateClient")
+          console.log("DB CONNECTION MICROSERVICE: SUCCESS! Client updated")
         }
       });
 
@@ -136,10 +136,10 @@ class Repository {
 //  One and only exported function, returns a connected repo.
 module.exports.connect = (connectionSettings) => {
   return new Promise((resolve, reject) => {
-    if(!connectionSettings.host) throw new Error("A host must be specified.");
-    if(!connectionSettings.user) throw new Error("A user must be specified.");
-    if(!connectionSettings.password) throw new Error("A password must be specified.");
-    if(!connectionSettings.port) throw new Error("A port must be specified.");
+    if(!connectionSettings.host) throw new Error("DB CONNECTION MICROSERVICE: A host must be specified.");
+    if(!connectionSettings.user) throw new Error("DB CONNECTION MICROSERVICE: A user must be specified.");
+    if(!connectionSettings.password) throw new Error("DB CONNECTION MICROSERVICE: A password must be specified.");
+    if(!connectionSettings.port) throw new Error("DB CONNECTION MICROSERVICE: A port must be specified.");
 
     resolve(new Repository(mysql.createConnection(connectionSettings)));
   });

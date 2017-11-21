@@ -5,16 +5,15 @@ var bodyParser = require('body-parser');
 
 var port = 8087;
 
-//  Lots of verbose logging when we're starting up...
-console.log("--- Customer Service---");
-console.log("Connecting to customer repository...");
+console.log("--- SIGN UP MICROSERVICE ---");
+console.log("Connecting to SIGN UP MICROSERVICE repository...");
 
 //  Log unhandled exceptions.
 process.on('uncaughtException', function(err) {
-  console.error('Unhandled Exception', err);
+  console.error('SIGN UP MICROSERVICE: Unhandled Exception', err);
 });
 process.on('unhandledRejection', function(err, promise){
-  console.error('Unhandled Rejection', err);
+  console.error('SIGN UP MICROSERVICE: Unhandled Rejection', err);
 });
 
 app.use(bodyParser.json());
@@ -22,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/sign_up_client', function(req, res) {
 
-  console.log(req.query);
+  console.log("SIGN UP MICROSERVICE -> Client to sign up: " + req.query);
 
   var requestOptions = {
     hostname: 'mule',
@@ -33,7 +32,7 @@ app.post('/sign_up_client', function(req, res) {
 
   var externalRequest = http.request(requestOptions, (externalResponse) => {
     externalResponse.on('data', function(data) {
-      console.log(data);
+      console.log("SIGN UP MICROSERVICE -> External response: " + data);
     })
     externalResponse.on('end', () => {
       res.end('Data was sent to destination');
@@ -45,8 +44,8 @@ app.post('/sign_up_client', function(req, res) {
 
 app.listen(port, (err) => {
   if (err) {
-    return console.log('something bad happened', err)
+    return console.error('SIGN UP MICROSERVICE: An error ocurred on microservice!: ', err)
   }
 
-  console.log('server is listening on port 8087') 
+  console.log('SIGN UP MICROSERVICE: server is listening on port 8087') 
 })

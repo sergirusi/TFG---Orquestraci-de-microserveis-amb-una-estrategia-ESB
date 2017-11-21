@@ -7,15 +7,15 @@ var repository = require('./repository/repository');
 var config = require('./config/config');
 
 //  Lots of verbose logging when we're starting up...
-console.log("--- Customer Service---");
-console.log("Connecting to customer repository...");
+console.log("--- DB CONNECTION MICROSERVICE ---");
+console.log("Connecting to DB CONNECTION MICROSERVICE repository...");
 
 //  Log unhandled exceptions.
 process.on('uncaughtException', function(err) {
-  console.error('Unhandled Exception', err);
+  console.error('DB CONNECTION MICROSERVICE: Unhandled Exception', err);
 });
 process.on('unhandledRejection', function(err, promise){
-  console.error('Unhandled Rejection', err);
+  console.error('DB CONNECTION MICROSERVICE: Unhandled Rejection', err);
 });
 
 repository.connect({
@@ -25,7 +25,7 @@ repository.connect({
   password: config.db.password,
   port: config.db.port
 }).then((repo) => {
-  console.log("Connected to database. Starting server...");
+  console.log("DB CONNECTION MICROSERVICE: Connected to database. Starting server...");
   
   return server.start({
     port: config.port,
@@ -33,7 +33,7 @@ repository.connect({
   });
 
 }).then((app) => {
-  console.log("Server started successfully, running on port " + config.port + ".");
+  console.log("DB CONNECTION MICROSERVICE: Server started successfully, running on port " + config.port + ".");
   app.on('close', () => {
     repository.disconnect();
   });

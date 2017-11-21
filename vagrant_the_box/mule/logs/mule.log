@@ -4101,3 +4101,523 @@ INFO  2017-11-16 08:19:28,307 [WrapperListener_start_runner] org.mule.module.lau
 * orquestrating_ms                              * default                        * DEPLOYED           *
 *******************************************************************************************************
 
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-16 10:42:42,854 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/16/17 10:42 AM                                  *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: 4a08a48087e8 (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-16 10:42:42,875 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-16 10:42:42,875 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-16 10:42:42,962 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-16 10:42:42,998 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-16 10:42:43,231 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:42:43,250 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-16 10:42:43,343 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:42:55,672 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:42:55,680 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:42:55,867 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-16 10:54:37,311 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/16/17 10:54 AM                                  *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: 4a08a48087e8 (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-16 10:54:37,315 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-16 10:54:37,319 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-16 10:54:37,342 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-16 10:54:37,367 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-16 10:54:37,637 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:54:37,673 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-16 10:54:37,787 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:54:51,597 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:54:51,606 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 10:54:51,873 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-16 12:01:15,322 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/16/17 12:01 PM                                  *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: 015258bb39fd (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-16 12:01:15,329 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-16 12:01:15,329 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-16 12:01:15,360 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-16 12:01:15,370 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-16 12:01:15,483 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 12:01:15,493 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-16 12:01:15,571 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 12:01:28,981 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 12:01:28,988 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-16 12:01:30,258 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-17 08:28:08,052 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/17/17 8:28 AM                                   *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: c4da947bf0c6 (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-17 08:28:08,071 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-17 08:28:08,071 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-17 08:28:08,146 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-17 08:28:08,164 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-17 08:28:08,420 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:28:08,480 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-17 08:28:08,746 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:28:23,837 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:28:23,846 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:28:24,161 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-17 08:31:40,196 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/17/17 8:31 AM                                   *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: c4da947bf0c6 (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-17 08:31:40,210 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-17 08:31:40,210 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-17 08:31:40,327 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-17 08:31:40,382 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-17 08:31:40,794 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:31:40,841 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-17 08:31:40,974 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:31:56,482 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:31:56,536 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:31:57,036 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-17 08:39:43,514 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/17/17 8:39 AM                                   *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: 8b5d6560700d (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-17 08:39:43,519 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-17 08:39:43,520 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-17 08:39:43,569 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-17 08:39:43,579 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-17 08:39:43,695 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:39:43,715 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-17 08:39:43,798 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:39:52,919 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:39:52,925 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 08:39:53,128 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-17 11:04:37,116 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/17/17 11:04 AM                                  *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: ecbc8af60bab (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-17 11:04:37,119 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-17 11:04:37,127 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-17 11:04:37,155 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-17 11:04:37,173 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-17 11:04:37,425 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:04:37,451 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-17 11:04:37,532 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:04:51,869 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:04:51,904 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:04:52,387 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-17 11:14:43,969 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/17/17 11:14 AM                                  *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: 5ac3f90c8d78 (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-17 11:14:43,973 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-17 11:14:43,974 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-17 11:14:43,994 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-17 11:14:44,005 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-17 11:14:44,196 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:14:44,210 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-17 11:14:44,259 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:14:52,362 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:14:52,370 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-17 11:14:52,529 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-20 08:17:20,988 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/20/17 8:17 AM                                   *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: 55eda385dce5 (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-20 08:17:21,014 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-20 08:17:21,015 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-20 08:17:21,127 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-20 08:17:21,166 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-20 08:17:22,070 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-20 08:17:22,110 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-20 08:17:22,307 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-20 08:17:41,423 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-20 08:17:41,439 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-20 08:17:41,760 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+
+--> Wrapper Started as Console
+Launching a JVM...
+Starting the Mule Container...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+INFO  2017-11-21 08:30:49,648 [WrapperListener_start_runner] org.mule.module.launcher.MuleContainer: 
+**********************************************************************
+* Mule ESB and Integration Platform                                  *
+* Version: 3.6.1 Build: b795785f                                     *
+* MuleSoft, Inc.                                                     *
+* For more information go to http://www.mulesoft.org                 *
+*                                                                    *
+* Server started: 11/21/17 8:30 AM                                   *
+* JDK: 1.7.0_80 (mixed mode)                                         *
+* OS: Linux (3.13.0-119-generic, amd64)                              *
+* Host: b8f7c1df8be0 (172.16.0.5)                                    *
+**********************************************************************
+INFO  2017-11-21 08:30:49,663 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Initializing core extensions
+INFO  2017-11-21 08:30:49,664 [WrapperListener_start_runner] org.mule.module.launcher.coreextension.DefaultMuleCoreExtensionManager: Starting core extensions
+INFO  2017-11-21 08:30:49,870 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: default
+INFO  2017-11-21 08:30:50,075 [WrapperListener_start_runner] org.mule.module.launcher.MuleSharedDomainClassLoader: Using domain dir /opt/mule/domains/default for domain default
+INFO  2017-11-21 08:30:50,285 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started domain 'default'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-21 08:30:50,322 [WrapperListener_start_runner] org.mule.module.launcher.DefaultArchiveDeployer: ================== New Exploded Artifact: orquestrating_ms
+INFO  2017-11-21 08:30:50,726 [WrapperListener_start_runner] org.mule.module.launcher.application.DefaultMuleApplication: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New app 'orquestrating_ms'                               +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-21 08:31:32,025 [WrapperListener_start_runner] org.mule.module.launcher.MuleDeploymentService: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Started app 'orquestrating_ms'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-21 08:31:32,047 [WrapperListener_start_runner] org.mule.module.launcher.DeploymentDirectoryWatcher: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Mule is up and kicking (every 5000ms)                    +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-11-21 08:31:32,845 [WrapperListener_start_runner] org.mule.module.launcher.StartupSummaryDeploymentListener: 
+**********************************************************************
+*              - - + DOMAIN + - -               * - - + STATUS + - - *
+**********************************************************************
+* default                                       * DEPLOYED           *
+**********************************************************************
+
+*******************************************************************************************************
+*            - - + APPLICATION + - -            *       - - + DOMAIN + - -       * - - + STATUS + - - *
+*******************************************************************************************************
+* orquestrating_ms                              * default                        * DEPLOYED           *
+*******************************************************************************************************
+

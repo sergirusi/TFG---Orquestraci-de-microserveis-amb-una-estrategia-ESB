@@ -6,15 +6,15 @@ var bodyParser = require('body-parser');
 var port = 8086;
 
 //  Lots of verbose logging when we're starting up...
-console.log("--- Customer Service---");
-console.log("Connecting to customer repository...");
+console.log("--- UPDATE CLIENT MICROSERVICE ---");
+console.log("Connecting to UPDATE CLIENT MICROSERVICE repository...");
 
 //  Log unhandled exceptions.
 process.on('uncaughtException', function(err) {
-  console.error('Unhandled Exception', err);
+  console.error('UPDATE CLIENT MICROSERVICE: Unhandled Exception', err);
 });
 process.on('unhandledRejection', function(err, promise){
-  console.error('Unhandled Rejection', err);
+  console.error('UPDATE CLIENT MICROSERVICE: Unhandled Rejection', err);
 });
 
 app.use(bodyParser.json());
@@ -31,20 +31,20 @@ app.post('/update_client', function(req, res) {
 
   var externalRequest = http.request(requestOptions, (externalResponse) => {
     externalResponse.on('data', function(data) {
-      console.log(data);
     })
     externalResponse.on('end', () => {
       res.end('Data was send to destination');
     })
   })
   var data = JSON.stringify(req.query);
+  console.log("UPDATE CLIENT MICROSERVICE -> Client to update: " + data)
   externalRequest.end(data);
 })
 
 app.listen(port, (err) => {
   if (err) {
-    return console.log('something bad happened', err)
+    return console.error('UPDATE CLIENT MICROSERVICE: An error ocurred on microservice!', err)
   }
 
-  console.log('server is listening on port 8086') 
+  console.log('UPDATE CLIENT MICROSERVICE: server is listening on port 8086') 
 })

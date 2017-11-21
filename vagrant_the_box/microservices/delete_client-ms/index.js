@@ -6,15 +6,15 @@ var bodyParser = require('body-parser');
 var port = 8085;
 
 //  Lots of verbose logging when we're starting up...
-console.log("--- Customer Service---");
-console.log("Connecting to customer repository...");
+console.log("--- DELETE CLIENT MICROSERVICE ---");
+console.log("Connecting to DELETE CLIENT MICROSERVICE repository...");
 
 //  Log unhandled exceptions.
 process.on('uncaughtException', function(err) {
-  console.error('Unhandled Exception', err);
+  console.error('DELETE CLIENT MICROSERVICE: Unhandled Exception', err);
 });
 process.on('unhandledRejection', function(err, promise){
-  console.error('Unhandled Rejection', err);
+  console.error('DELETE CLIENT MICROSERVICE: Unhandled Rejection', err);
 });
 
 app.use(bodyParser.json());
@@ -32,20 +32,19 @@ app.post('/delete_client', function(req, res) {
 
   var externalRequest = http.request(requestOptions, (externalResponse) => {
     externalResponse.on('data', function(data) {
-      console.log(data);
     })
     externalResponse.on('end', () => {
       res.end('Data was requested to destination');
     })
   })
-  console.log("DELETED CLIENT : " + data)
+  console.log("DELETE CLIENT MICROSERVICE -> Client to delete: " + data)
   externalRequest.end(data);
 })
 
 app.listen(port, (err) => {
   if (err) {
-    return console.log('something bad happened', err)
+    return console.error('DELETE CLIENT MICROSERVICE: An error ocurred on microservice!: ', err)
   }
 
-  console.log('server is listening on port 8085') 
+  console.log('DELETE CLIENT MICROSERVICE: server is listening on port 8085') 
 })

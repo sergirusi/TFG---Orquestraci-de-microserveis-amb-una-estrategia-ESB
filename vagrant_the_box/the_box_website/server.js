@@ -7,7 +7,7 @@ var router = express.Router();
 var path = __dirname + '/views/';
 
 router.use(function (req,res,next) {
-  console.log("/" + req.method);
+  console.log("THE BOX WEBSITE SERVER: Requested method = /" + req.method);
   next();
 });
 
@@ -40,11 +40,11 @@ router.get('/sign_up_client', function(req, res) {
 
 	var externalRequest = http.request(requestOptions, (externalResponse) => {
 		externalResponse.on('data', function(data) {
-	  		console.log(data);
+	  		console.log("THE BOX WEBSITE SERVER: Sign up external response data = " + data);
 		})
 	})
 	externalRequest.end();
-	console.log("Website Server: 	SIGN UP CLIENT DATA SENT = " + req.query);
+	console.log("THE BOX WEBSITE SERVER: Sign up client query = " + req.query);
 	res.send("OK");
 })
 
@@ -65,7 +65,7 @@ router.get('/get_client', function(req, res) {
 
 	var externalRequest = http.request(requestOptions, (externalResponse) => {
 		externalResponse.on('data', function(data) {
-	  		console.log("externalResponse = " + data);
+	  		console.log("THE BOX WEBSITE SERVER: Get client external response data = " + data);
 	  		res.send('OK')
 		})
 	})
@@ -85,11 +85,11 @@ router.get('/delete_client', function(req, res) {
 
 	var externalRequest = http.request(requestOptions, (externalResponse) => {
 		externalResponse.on('data', function(data) {
-	  		console.log(data);
+	  		console.log("THE BOX WEBSITE SERVER: Delete client external response data = " + data);
 		})
 	})
 	externalRequest.end();
-	console.log("SENT DATA = " + req.query);
+	console.log("THE BOX WEBSITE SERVER: Delete client query = " + req.query);
 	res.send("OK");
 })
 
@@ -106,7 +106,7 @@ router.get('/update_client', function(req, res) {
 
 	var externalRequest = http.request(requestOptions, (externalResponse) => {
 		externalResponse.on('data', function(data) {
-	  		console.log(data);
+	  		console.log("THE BOX WEBSITE SERVER: Upd client external response data = " + data);
 		})
 	})
 	externalRequest.end();
@@ -116,11 +116,11 @@ router.get('/update_client', function(req, res) {
 router.post('/db_response', function(req, res) {
  	gotJSON = JSON.stringify(req.query);
   	res.send('OK')
-  	console.log("JSON DATA = " + gotJSON);
+  	console.log("THE BOX WEBSITE SERVER: Database response = " + gotJSON);
 });
 
 router.get('/get_data', function(req, res) {
-	console.log("get_data->gotJSON = " + gotJSON);
+	console.log("THE BOX WEBSITE SERVER: Saved data = " + gotJSON);
 	res.send(gotJSON);
 });
 
@@ -134,5 +134,5 @@ app.use(cors());
 });*/
 
 app.listen(8081, function(){
-  console.log("Live at Port 8081");
+  console.log("THE BOX WEBSITE SERVER: Live at Port 8081");
 });
