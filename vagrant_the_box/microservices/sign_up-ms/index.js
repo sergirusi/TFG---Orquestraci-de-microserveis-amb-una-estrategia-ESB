@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/sign_up_client', function(req, res) {
 
-  console.log("SIGN UP MICROSERVICE -> Client to sign up: " + req.query);
+  console.log("SIGN UP MICROSERVICE -> Client to sign up: " + JSON.stringify(req.query));
 
   var requestOptions = {
     hostname: 'mule',
@@ -35,7 +35,7 @@ app.post('/sign_up_client', function(req, res) {
       console.log("SIGN UP MICROSERVICE -> External response: " + data);
     })
     externalResponse.on('end', () => {
-      res.end('Data was sent to destination');
+      res.end('Data has been sent to destination');
     })
   })
   var data = JSON.stringify(req.query);

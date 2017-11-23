@@ -33,9 +33,10 @@ app.post('/update_client', function(req, res) {
     externalResponse.on('data', function(data) {
     })
     externalResponse.on('end', () => {
-      res.end('Data was send to destination');
+      res.end('Data has been sent to destination');
     })
   })
+
   var data = JSON.stringify(req.query);
   console.log("UPDATE CLIENT MICROSERVICE -> Client to update: " + data)
   externalRequest.end(data);
