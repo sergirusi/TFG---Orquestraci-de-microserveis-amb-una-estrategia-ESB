@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "AV_jmCpbwg4ex9trZxYz",
+    "_type": "dashboard",
+    "_source": {
+      "title": "The Box",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"AV_jf_--wg4ex9trZtIq\",\"panelIndex\":1,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"AV_jcpsNwg4ex9trZrm7\",\"panelIndex\":2,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-2\":{\"vis\":{\"legendOpen\":true}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"kibana\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"kibana\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"elasticsearch\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"elasticsearch\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"logstash\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"logstash\",\"type\":\"phrase\"}}}},{\"query\":{\"match_all\":{}}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "AV_jf_--wg4ex9trZtIq",
+    "_type": "visualization",
+    "_source": {
+      "title": "Average Network usage over time",
+      "visState": "{\"title\":\"Average Network usage over time\",\"type\":\"line\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"@timestamp per 30 minutes\"},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Average net.rxBytes_ps\"},\"drawLinesBetweenPoints\":true,\"mode\":\"normal\",\"show\":\"true\",\"showCircles\":true,\"type\":\"line\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"line\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Average net.rxBytes_ps\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"net.rxBytes_ps\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"containerName.keyword\",\"size\":11,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"AV_i1fxjwg4ex9trZgof\",\"query\":{\"match_all\":{}},\"filter\":[{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"kibana\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"kibana\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"elasticsearch\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"elasticsearch\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"logstash\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"logstash\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "AV_jcpsNwg4ex9trZrm7",
+    "_type": "visualization",
+    "_source": {
+      "title": "Memory Usage",
+      "visState": "{\"title\":\"Memory Usage\",\"type\":\"histogram\",\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"filter\":false,\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"containerName.keyword: Descending\"},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"memory usage\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-2\"},{\"show\":true,\"mode\":\"stacked\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"3\",\"label\":\"memory limit\"},\"valueAxis\":\"ValueAxis-2\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-2\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"RightAxis-1\",\"position\":\"right\",\"scale\":{\"mode\":\"percentage\",\"type\":\"linear\",\"defaultYExtents\":false,\"setYExtents\":false},\"show\":true,\"style\":{},\"title\":{\"text\":\"Max memory.usage\"},\"type\":\"value\"}]},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"containerName.keyword\",\"include\":\"\",\"size\":11,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"memory.usage\",\"customLabel\":\"memory usage\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"memory.limit\",\"customLabel\":\"memory limit\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"legendOpen\":false}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"AV_i1fxjwg4ex9trZgof\",\"query\":{\"match_all\":{}},\"filter\":[{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"kibana\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"kibana\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"elasticsearch\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"elasticsearch\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"AV_i1fxjwg4ex9trZgof\",\"key\":\"containerName\",\"negate\":true,\"type\":\"phrase\",\"value\":\"logstash\"},\"query\":{\"match\":{\"containerName\":{\"query\":\"logstash\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  }
+]
