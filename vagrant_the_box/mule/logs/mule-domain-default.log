@@ -1,8 +1,16 @@
-INFO  2017-11-23 08:20:56,776 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2017-12-14 09:53:41,910 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + New domain 'default'                                     +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO  2017-11-23 08:20:56,780 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+INFO  2017-12-14 09:53:41,911 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing domain 'default'                            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-12-14 11:02:17,189 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New domain 'default'                                     +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2017-12-14 11:02:17,191 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 + Initializing domain 'default'                            +
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
